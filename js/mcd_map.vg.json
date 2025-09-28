@@ -66,7 +66,18 @@
         "color": {
           "field": "Number of Locations",
           "type": "quantitative",
-          "scale": { "range": ["lightcoral", "darkred"] }
+          "scale": {
+            "type": "linear",
+            "domain": [0, 20, 40, 60, 80],
+            "range": ["#EBCC2A", "#E1AF00", "#F28E2B", "#D55E00", "#B21A00"]
+          },
+          "legend": {
+            "title": "Number of Outlets",
+            "titleFontSize": 12,
+            "labelFontSize": 10,
+            "orient": "right",
+            "offset": 10
+          }
         },
         "tooltip": [
           { "field": "State", "type": "nominal", "title": "State" },
@@ -76,5 +87,6 @@
     }
   ]
 }
+
 
 
