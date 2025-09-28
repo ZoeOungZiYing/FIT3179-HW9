@@ -75,7 +75,7 @@
             "title": "Number of Outlets",
             "titleFontSize": 12,
             "labelFontSize": 10,
-            "orient": "right",
+            "orient": "bottom-right",
             "offset": 10
           }
         },
@@ -87,6 +87,7 @@
     }
   ]
 }
+
 
 
 
