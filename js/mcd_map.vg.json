@@ -45,7 +45,7 @@
       }
     },
     {
-      "data": { "url": "data/mcd_locations_in_malaysia.csv" },
+      "data": { "url": "https://raw.githubusercontent.com/ZoeOungZiYing/FIT3179-HW9/refs/heads/main/data/mcd_locations_in_malaysia.csv" },
       "mark": {
         "type": "circle",
         "stroke": "black",
@@ -74,3 +74,4 @@
     }
   ]
 }
+
