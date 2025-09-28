@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1150,
+  "height": 600,
+  "padding": {
+    "top": 40,
+    "left": 20,
+    "right": 20,
+    "bottom": 20
+  },
+  "title": {
+    "text": "McDonald's Outlets Across Malaysia (2022)",
+    "anchor": "middle",
+    "fontSize": 28,
+    "fontWeight": "bold",
+    "offset": 20
+  },
+  "projection": {
+    "type": "equalEarth",
+    "center": [108.5, 3.5],
+    "scale": 3500
+  },
+  "layer": [
+    {
+      "data": { "sphere": true },
+      "mark": { "type": "geoshape", "fill": "#cce6ff" }
+    },
+    {
+      "data": { "graticule": { "step": [10, 10] } },
+      "mark": { "type": "geoshape", "stroke": "lightgray", "strokeWidth": 0.5 }
+    },
+    {
+      "data": {
+        "url": "js/malaysia_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "malaysia_states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightyellow",
+        "stroke": "black",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": { "url": "data/mcd_locations_in_malaysia.csv" },
+      "mark": {
+        "type": "circle",
+        "stroke": "black",
+        "strokeWidth": 0.5,
+        "opacity": 0.8
+      },
+      "encoding": {
+        "longitude": { "field": "Longitude", "type": "quantitative" },
+        "latitude": { "field": "Latitude", "type": "quantitative" },
+        "size": {
+          "field": "Number of Locations",
+          "type": "quantitative",
+          "title": "Number of Outlets (Size)",
+          "scale": { "range": [200, 3000] }
+        },
+        "color": {
+          "field": "Number of Locations",
+          "type": "quantitative",
+          "scale": { "range": ["lightcoral", "darkred"] }
+        },
+        "tooltip": [
+          { "field": "State", "type": "nominal", "title": "State" },
+          { "field": "Number of Locations", "type": "quantitative", "title": "Number of Outlets" }
+        ]
+      }
+    }
+  ]
+}
