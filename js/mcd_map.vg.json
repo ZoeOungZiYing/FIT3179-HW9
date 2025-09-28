@@ -68,7 +68,7 @@
           "type": "quantitative",
           "scale": {
             "type": "linear",
-            "domain": [0, 20, 40, 60, 80],
+            "domain": [0, 20, 40, 60, 80, 100],
             "range": ["#EBCC2A", "#E1AF00", "#F28E2B", "#D55E00", "#B21A00"]
           },
           "legend": {
@@ -87,6 +87,7 @@
     }
   ]
 }
+
 
 
 
